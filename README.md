@@ -7,6 +7,11 @@ This project implements a credit scoring engine with:
 - **Monitoring** (drift detection with Evidently)
 
 ## Quickstart
+Generate sample data set 
+```bash
+python3 src/training/make_dataset.py 
+```
+
 1. Train:
 ```bash
 docker build -t credit-train -f Dockerfile.train .
