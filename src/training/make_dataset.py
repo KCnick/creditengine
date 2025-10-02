@@ -19,7 +19,7 @@ def make_dataset(n_samples=5000, out_path="data/credit_train.parquet"):
     ).astype(int)
 
     df.to_parquet(out_path, index=False)
-    print(f"✅ Dataset saved to {out_path} with shape {df.shape}")
+    print(f"Dataset saved to {out_path} with shape {df.shape}")
 
 if __name__ == "__main__":
     make_dataset()
