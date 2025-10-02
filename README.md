@@ -15,7 +15,8 @@ docker run credit-train
 
 2. Test:
  ```bash
-  docker build -t credit-serving -f Dockerfile .
+  docker build --no-cache -t credit-serving -f Dockerfile .
+
   docker run -it --rm -p 5000:5000 -v $(pwd)/mlruns:/app/mlruns credit-serving
   curl -X POST http://localhost:8080/predict -H "Content-Type: application/json" -d '{"age":30,"income":25000,"credit_lines":2,"delinquencies":0,"utilization":0.2,"months_active":24,"region":"Nairobi"}'
   ```
